@@ -47,7 +47,6 @@ module.exports = (config) => {
 
     // add this plugin to the Chat classes
     return {
-      namespace,
       extends: {
           Chat: extension,
           GlobalChat: extension
