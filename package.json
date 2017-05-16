@@ -1,0 +1,8 @@
+{
+  "name": "ocf-online-user-search",
+  "version": "0.0.1",
+  "main": "./plugin.js",
+  "open-chat-framework": {
+    "namespace": "online-user-search"
+  }
+}
