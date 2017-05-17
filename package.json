@@ -4,5 +4,8 @@
   "main": "./plugin.js",
   "open-chat-framework": {
     "namespace": "online-user-search"
-  }
+  },
+  "dependencies": {
+    "ocf": "^0.0.2"
+  },
 }
