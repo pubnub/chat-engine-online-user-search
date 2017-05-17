@@ -1,5 +1,5 @@
 module.exports = (config) => {
-    
+
     config = config || {};
     config.field = config.field || 'username';
     config.caseSensitive = config.caseSensitive || false;
@@ -20,7 +20,7 @@ module.exports = (config) => {
 
               let haystack  = this.parent.users[key].state(this.parent);
 
-              // see if that user username includes the input text 
+              // see if that user username includes the input text
               if(haystack && haystack[config.field]) {
 
                   haystack = haystack[config.field];
@@ -47,6 +47,7 @@ module.exports = (config) => {
 
     // add this plugin to the Chat classes
     return {
+      namespace: 'onlineUserSearch',
       extends: {
           Chat: extension,
           GlobalChat: extension
