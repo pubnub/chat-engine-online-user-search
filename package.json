@@ -1,4 +1,5 @@
 {
+  "author": "Ian Jennings",
   "name": "ocf-online-user-search",
   "version": "0.0.1",
   "main": "src/plugin.js",
