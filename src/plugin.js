@@ -1,7 +1,9 @@
+const dotty = require('dotty');
+
 module.exports = (config) => {
 
     config = config || {};
-    config.field = config.field || 'username';
+    config.prop = config.prop || 'username';
     config.caseSensitive = config.caseSensitive || false;
 
     // these are new methods that will be added to the extended class
@@ -19,17 +21,16 @@ module.exports = (config) => {
           for(var key in this.parent.users) {
 
               let haystack  = this.parent.users[key].state(this.parent);
+              let target = dotty.get(haystack, config.prop);
 
               // see if that user username includes the input text
-              if(haystack && haystack[config.field]) {
-
-                  haystack = haystack[config.field];
+              if(haystack && target) {
 
                   if(!config.caseSensitive) {
-                      haystack = haystack.toLowerCase();
+                      target = target.toLowerCase();
                   }
 
-                  if(haystack.indexOf(needle) > -1) {
+                  if(target.indexOf(needle) > -1) {
 
                       // if it does, add it to the list of returned users
                       returnList.push(this.parent.users[key]);
