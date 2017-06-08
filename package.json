@@ -1,10 +1,10 @@
 {
   "author": "Ian Jennings",
-  "name": "ocf-online-user-search",
+  "name": "chat-engine-online-user-search",
   "version": "0.0.2",
   "main": "src/plugin.js",
   "dependencies": {
     "dotty": "0.0.2",
-    "ocf": "^0.0.4"
+    "chat-engine": "^0.0.4"
   }
 }
