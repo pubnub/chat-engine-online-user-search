@@ -1,5 +1,17 @@
+/**
+* Searches a {@link Chat} for a {@link User} with a ```state().username``` containing a given string.
+* @module chat-engine-online-user-search
+*/
+
 const dotty = require('dotty');
 
+/**
+* @function
+* @example
+* chat = new ChatEngine.Chat('markdown-chat');
+* chat.plugin(onlineUserSearch({}));
+* let foundUsers = chat.search('red');
+*/
 module.exports = (config) => {
 
     config = config || {};
@@ -7,6 +19,13 @@ module.exports = (config) => {
     config.caseSensitive = config.caseSensitive || false;
 
     // these are new methods that will be added to the extended class
+
+    /**
+    * @method  search
+    * @ceextends Chat
+    * @param {String} needle The username to search for.
+    * @returns {Array} An array of {@link User}s that match the input string.
+    */
     class extension {
       search(needle) {
 
