@@ -7,12 +7,15 @@ const dotty = require('dotty');
 
 /**
 * @function
+* @param {Object} [config] The config object
+* @param {String} [prop="username"] The {@link User#state} property to use for string matching
+* @param {Boolean} [caseSensitive=false] Enable to consider ```config.prop``` character case when searching.
 * @example
 * chat = new ChatEngine.Chat('markdown-chat');
 * chat.plugin(onlineUserSearch({}));
 * let foundUsers = chat.search('red');
 */
-module.exports = (config) => {
+module.exports = (config = {}) => {
 
     config = config || {};
     config.prop = config.prop || 'username';
@@ -69,8 +72,7 @@ module.exports = (config) => {
     return {
       namespace: 'onlineUserSearch',
       extends: {
-          Chat: extension,
-          GlobalChat: extension
+          Chat: extension
       }
     }
 
