@@ -1,5 +1,5 @@
 /**
-* Searches a {@link Chat} for a {@link User} with a ```state().username``` containing a given string.
+* Searches a {@link Chat} for a {@link User} with a ```state.username``` containing a given string.
 * @module chat-engine-online-user-search
 */
 
@@ -42,7 +42,7 @@ module.exports = (config = {}) => {
           // for every user that the parent chat knows about
           for(var key in this.parent.users) {
 
-              let haystack  = this.parent.users[key].state(this.parent);
+              let haystack  = this.parent.users[key].state;
               let target = dotty.get(haystack, config.prop);
 
               // see if that user username includes the input text
