@@ -1,5 +1,19 @@
 // In this example we are going to create a chat client
 // That will let you show you who is currently online
+const YOUR_PUBLISH_KEY = '';
+const YOUR_SUBSCRIBE_KEY = '';
+
+// just making sure you're paying attention
+if (YOUR_PUBLISH_KEY === '' || YOUR_SUBSCRIBE_KEY === '') {
+    alert('You forgot to enter your keys');
+}
+
+//    ________          __  ______            _          
+//   / ____/ /_  ____ _/ /_/ ____/___  ____ _(_)___  ___ 
+//  / /   / __ \/ __ `/ __/ __/ / __ \/ __ `/ / __ \/ _ \
+// / /___/ / / / /_/ / /_/ /___/ / / / /_/ / / / / /  __/
+// \____/_/ /_/\__,_/\__/_____/_/ /_/\__, /_/_/ /_/\___/ 
+//                                  /____/               
 
 // get some references to functions
 let send = function () {};
@@ -10,15 +24,12 @@ const config = { prop: 'uuid', caseSensitive: false };
 
 // create another instance of chat-engine for our actual user
 const ChatEngine = ChatEngineCore.create({
-    publishKey: 'pub-c-bcf4e625-d5e0-45de-9f74-f222bf63a4a1',
-    subscribeKey: 'sub-c-70f29a7c-8927-11e7-af73-96e8309537a2',
-}, {
-    endpoint: 'http://localhost:3000/insecure',
-    globalChannel: 'online-user-search-example'
+    publishKey: YOUR_PUBLISH_KEY,
+    subscribeKey: YOUR_SUBSCRIBE_KEY
 });
 
 // connect eddy to the network, and when it is successful, do some stuff
-ChatEngine.connect('Username');
+ChatEngine.connect('Ed');
 
 ChatEngine.on('$.ready', () => {
 
