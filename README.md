@@ -26,3 +26,6 @@ ChatEngine.global.plugin(ChatEngineCore.plugin['chat-engine-online-user-search']
 ChatEngine.global.onlineUserSearch.search('foo');
 ```
 
+## Support
+
+- If you **need help**, have a **general question** a **feature request** or to file a **bug**, contact <support@pubnub.com>
