@@ -2,6 +2,7 @@
   "author": "Ian Jennings",
   "name": "chat-engine-online-user-search",
   "version": "0.0.11",
+  "license": "SEE LICENSE IN LICENSE",
   "main": "src/plugin.js",
   "dependencies": {
     "chat-engine": "^0.9.21",
